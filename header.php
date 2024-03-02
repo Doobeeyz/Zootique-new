@@ -4,7 +4,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-dark ">
                     <div class="container-fluid">
-                        <a class="navbar-brand" style="font-size: 1.5rem;" href="#">Zootique</a>
+                        <a class="navbar-brand" style="font-size: 1.5rem;" href="vet.php">Zootique</a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -16,31 +16,23 @@
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page" href="catalog.php">Весь каталог</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="bucket.php">Корзина</a>
+                                </li>
                             </ul>
-                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                                <?php
-                                if(!isset($_SESSION['id'])){
-                                    ?>
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="login.php">Войти</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="registration.php">Регистрация</a>
-                                    </li>
-                                    <?php } else {?>
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page"><?=$_SESSION['name']?></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page"><?=$_SESSION['lastname']?></a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="profile.php">Profile</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="logout.php">Logout</a>
-                                    </li>
-                                    <?php } ?>
+                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">  
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="login.html">Войти</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="registration.html">Регистрация</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="profile.html">Профиль</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page">Выйти</a>
+                                </li>
                             </ul>
                         </div>
                     </div>

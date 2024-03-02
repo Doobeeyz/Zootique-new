@@ -19,18 +19,6 @@ body {
     overflow-x: hidden ;
 }
 
-.row {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * var(--bs-gutter-y));
-    margin-right: calc(-.5 * var(--bs-gutter-x));
-    margin-left: calc(-.5 * var(--bs-gutter-x));
-    justify-content: space-between;
-
-}
-
 #hero {
     background-image: url('https://www.proplan.ru/sites/default/files/styles/image_1920x767/public/2020-10/kak-igrat-s-sobakoi.jpg?itok=QsXQ1gOv');
     background-size: cover;

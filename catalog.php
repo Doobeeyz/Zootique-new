@@ -17,29 +17,37 @@
      ?>
     <div class="container-xl">
         <div class="row">
-            <div class="col-1 mt-5">
-                <!-- Filter Block -->
-                <div class="filter-block">
+            <div class="col-2" style="box-shadow: 12px 0 24px rgba(0, 0, 0, 0.1);">
+                <div class="filter-block mt-5">
                     <h4 class="mb-4">Фильтры</h4>
-                    <!-- Add your filter elements here -->
-                    <label for="category">Тип товара:</label>
+                    <label for="price">Цена от:</label><br>
+                    <div id="price" class="row">
+                        <div class="col-12">
+                            <input id="minPrice" class="col-10"><br>
+                            <label for="maxPrice">До:</label><br>
+                            <input id="maxPrice" class="col-10"><br>
+                        </div>
+                    </div>
+                    <label for="category" class="mt-3">Тип товара:</label><br>
                     <select id="category" name="category" class="mb-4">
-                        <option value="1">Корма</option>
-                        <option value="2">Медицина</option>
-                        <option value="">Игрушки</option>
-                    </select>
-                    <label for="animal">Животное:</label>
+                        <option value="1">Все</option>
+                        <option value="2">Корма</option>
+                        <option value="3">Медицина</option>
+                        <option value="4">Игрушки</option>
+                    </select><br>
+                    <label for="animal">Животное:</label><br>
                     <select id="animal" name="animal" class="mb-4">
-                        <option value="1">Кошка</option>
-                        <option value="2">Собака</option>
-                        <option value="">Другое</option>
-                    </select>
+                        <option value="1">Все</option>
+                        <option value="2">Кошка</option>
+                        <option value="3">Собака</option>
+                        <option value="4">Другое</option>
+                    </select><br>
                     
                     
                 </div>
             </div>
 
-    <div class="col-11">
+    <div class="col-10">
     
         <div class="container-lg">
             <div id="recc">
@@ -54,7 +62,8 @@
                             <div class="card mb-4" style="width: 12rem; height: 20rem;">
                                 <img src="..." class="card-img-top" alt="...">
                                 <div class="card-body">
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <p class="card-text">Описание товара</p>
+                                    <b>Цена</b>
                                 </div>
                             </div>
                         </a>
@@ -66,8 +75,10 @@
     </div>
 </div>
 </div>
+
+</div>
         <?php 
-            require_once("footer.php")
+            require_once("footer.html")
          ?>
 </body>
 </html>
