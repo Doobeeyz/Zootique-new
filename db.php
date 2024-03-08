@@ -209,4 +209,4 @@ session_start();
     ");
     $query->execute(['user_id' => $user_id, 'track_id' => $track_id]);
 }
-?>
+?> 
