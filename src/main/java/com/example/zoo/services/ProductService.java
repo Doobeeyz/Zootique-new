@@ -11,8 +11,8 @@ public class ProductService {
     private List<Product> products = new ArrayList<>();
     private long id = 0;
     {
-        products.add(new Product(++id,"Корм","Корм для собак",12000,"Almaty","Chernova"));
-        products.add(new Product(++id, "Корм","Корм для кошек",10000,"Astana","Chernova"));
+        products.add(new Product(++id,"Корм",10000,"Корм для собак",5));
+        products.add(new Product(++id, "Корм",11000,"Корм для кошек",6));
     }
     public List<Product> listProducts(){
         return products;
