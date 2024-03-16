@@ -26,8 +26,8 @@ public class User {
 //    private Image avatar;
     @Column(name = "password")
     private String password;
-    @Column(name = "role")
-    private Set<Role> roles = new HashSet<>();
+//    @Column(name = "role")
+//    private Set<Role> roles = new HashSet<>();
     @Column(name = "dateOfCreated")
     private LocalDateTime dateOfCreated;
     @PrePersist
