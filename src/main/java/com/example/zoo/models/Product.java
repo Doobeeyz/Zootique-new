@@ -1,72 +1,34 @@
 package com.example.zoo.models;
 
+
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Product")
+@Table (name="product")
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    private long id;
-    @Column(name = "name")
-    private String name;
+    private Long id;
+
+    @Column(name = "title")
+    private String title;
+
+    @Column(name = "description", columnDefinition = "text")
+    private String description;
+
     @Column(name = "price")
     private int price;
-    @Column(name = "description")
-    private String description;
-    @Column(name = "quantity")
-    private int quantity;
 
+    @Column(name = "city")
+    private String city;
 
-    public Product() {
-    }
-
-    public Product(Long id, String name, int price, String description, int quantity) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.quantity = quantity;
-    }
-
-    public String getTitle() {
-        return this.name;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    public int getPrice() {
-        return this.price;
-    }
-
-    public void setTitle(String title) {
-        this.name = title;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-
-
-    public String toString() {
-        return "Product(name=" + this.getName() + ", description=" + this.getDescription() + ", price=" + this.getPrice()  + ")";
-    }
-
-    public long getId() {
-        return this.id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
+    @Column(name = "author")
+    private String author;
 }

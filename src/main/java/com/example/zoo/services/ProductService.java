@@ -1,28 +1,34 @@
 package com.example.zoo.services;
 
 import com.example.zoo.models.Product;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import com.example.zoo.repositories.ProductRepository;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
+@RequiredArgsConstructor
 public class ProductService {
-    private List<Product> products = new ArrayList<>();
-    private long id = 0;
-    {
-        products.add(new Product(++id,"Корм",10000,"Корм для собак",5));
-        products.add(new Product(++id, "Корм",11000,"Корм для кошек",6));
-    }
-    public List<Product> listProducts(){
-        return products;
-    }
-    public void saveProduct(Product product){
-        product.setId(++id);
-        products.add(product);
-    }
-    public void deleteProduct(Long id){
-        products.removeIf(product -> product.getId()==id);
+    private final ProductRepository productRepository;
+
+    public List<Product> listProducts(String title) {
+        if (title != null) return productRepository.findByTitle(title);
+        return productRepository.findAll();
     }
 
+    public void saveProduct(Product product) {
+        log.info("Saving new {}", product);
+        productRepository.save(product);
+    }
+
+    public void deleteProduct(Long id) {
+        productRepository.deleteById(id);
+    }
+
+    public Product getProductById(Long id) {
+        return productRepository.findById(id).orElse(null);
+    }
 }
