@@ -23,10 +23,15 @@ public class ProductController {
     @GetMapping("/product/{id}")
     public String productInfo(@PathVariable Long id, Model model) {
         Product product = productService.getProductById(id);
+        if (product == null) {
+            return "redirect:/"; 
+        }
         model.addAttribute("product", product);
         model.addAttribute("images", product.getImages());
         return "product-info";
     }
+
+
 
     @PostMapping("/product/create")
     public String createProduct(@RequestParam("file1") MultipartFile file1, @RequestParam("file2") MultipartFile file2,

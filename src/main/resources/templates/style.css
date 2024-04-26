@@ -23,9 +23,6 @@ nav a {
 
 body {
     overflow-x: hidden ;
-    background-color: #20b502;
-    color: #333333;
-
 }
 
 #products-container::-webkit-scrollbar-thumb {
@@ -78,39 +75,39 @@ body {
     border-color: #20b502;
 }
 
-#recc {
+.recc {
     padding: 2rem;
 }
 
-#recc ul {
+.recc ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
 }
 
-#recc li {
+.recc li {
     margin-bottom: 2rem;
 }
 
-#recc img {
+.recc img {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-#recc h3 {
+.recc h3 {
     font-size: 1.5rem;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
 
-#recc p {
+.recc p {
     font-size: 1rem;
     margin-bottom: 1rem;
 }
 
-#recc a {
+.recc a {
     text-decoration: none;
 }
 
