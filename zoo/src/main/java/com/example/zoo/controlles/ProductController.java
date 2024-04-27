@@ -1,6 +1,7 @@
 package com.example.zoo.controlles;
 
 import com.example.zoo.models.User;
+import com.example.zoo.models.enums.Role;
 import com.example.zoo.services.UserService;
 import org.springframework.ui.Model;
 import com.example.zoo.services.ProductService;
@@ -12,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.util.Set;
 
 @Controller
 @RequiredArgsConstructor
@@ -25,10 +27,22 @@ public class ProductController {
         return "vet";
     }
 
+//    @GetMapping("/products")
+//    public String showProductsPage(Principal principal) {
+//        String username = principal.getName();
+//        User user = userService.getUserByUsername(username);
+//        Set<Role> roles = user.getRoles();
+//        if (roles.contains(Role.ADMIN)) {
+//            return "products";
+//        } else {
+//            return "productsUser";
+//        }
+//    }
+
     @GetMapping("/products")
-    public String products(@RequestParam(name = "title", required = false) String title, Model model) {
+    public String pu(@RequestParam(name = "title", required = false) String title, Model model) {
         model.addAttribute("products", productService.listProducts(title));
-        return "products";
+        return "productsUser";
     }
 
     @GetMapping("/profile")

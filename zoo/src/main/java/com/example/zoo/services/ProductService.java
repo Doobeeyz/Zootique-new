@@ -2,6 +2,7 @@ package com.example.zoo.services;
 
 import com.example.zoo.models.Image;
 import com.example.zoo.models.Product;
+import io.micrometer.common.util.StringUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,11 @@ public class ProductService {
     private final ProductRepository productRepository;
 
     public List<Product> listProducts(String title) {
-        if (title != null) return productRepository.findByTitle(title);
-        return productRepository.findAll();
+        if (!StringUtils.isEmpty(title)) {
+            return productRepository.findByTitleContaining(title);
+        } else {
+            return productRepository.findAll();
+        }
     }
 
     public void saveProduct(Product product, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {

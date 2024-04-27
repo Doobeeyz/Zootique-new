@@ -92,7 +92,7 @@
     <div class="col-2" id="filters" style="box-shadow: 12px 0 24px rgba(0, 0, 0, 0.1);">
         <div class="filter-block mt-3`">
             <form action="/products" method="get">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3 mt-2">
                     <input type="text" name="title" class="form-control" aria-describedby="button-addon2">
                     <input type="submit" class="btn btn-outline-secondary" id="button-addon2" value="Поиск">
                 </div>

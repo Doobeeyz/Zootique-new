@@ -6,12 +6,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link href="../../../../../demo2/src/main/resources/static/css/style.css" rel="stylesheet">
+    <style>
+        .footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<body>
+<body style="overflow-x: hidden; overflow-y: hidden">
     <header>
         <div class="" style=" z-index: 2;">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 bg-dark">
                     <nav class="navbar navbar-expand-lg navbar-dark ">
                         <div class="container-fluid">
                             <a class="navbar-brand" style="font-size: 1.5rem;" href="#">Zootique</a>
@@ -38,7 +46,7 @@
                                         <a class="nav-link" href="registration">Регистрация</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" aria-current="page" href="/profile/${user.id}">Профиль</a>
+                                        <a class="nav-link" aria-current="page" href="profile">Профиль</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" aria-current="page">Выйти</a>
@@ -57,20 +65,8 @@
             <div class="col-12">
                 <div class="col-8 mx-auto"> 
                     <div class="row mt-5">
-                        <div class="col-4">
-                            <img class="mt-2" src="" style="width: 150px; height: 200px;">
-                            <div class="row mt-4">
-                                <div class="">
-                                    <button type="button" class="btn btn-success">Изменить пароль</button>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="">
-                                    <button type="button" class="btn btn-success">Добавить номер&nbsp;</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-8">
+
+                        <div class="col-8 mx-auto">
                         <div class="row">
                             <div class="col-12">
                                 <label>Имя:</label>
@@ -101,14 +97,25 @@
                                 <input type="text" name="login" class="form-control border-2" value="${user.email}" readonly>
                             </div>
                         </div>
+                            <div class="row mt-4">
+                                <div class="col-6 mx-auto">
+                                    <button type="button" class="btn btn-success">Изменить пароль</button>
+                                </div>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-6 mx-auto">
+                                    <button type="button" class="btn btn-success">Добавить номер&nbsp;</button>
+                                </div>
+                            </div>
                     </div>
-                </div>      
+
+                </div>
             </div>
         </div>
     </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
+    <div class="container-fluid bg-dark py-3 footer" style="position: fixed;">
         <div class="row mt-3">
                 <div class="">
                     <p class="text-light">

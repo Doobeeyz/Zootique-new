@@ -6,8 +6,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../../../../demo2/src/main/resources/static/css/style.css">
+    <style>
+        .footer{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<body style="overflow-x: hidden;">
+<body style="overflow-x: hidden; overflow-y: hidden">
 <header id="header">
     <div class="" style=" z-index: 2;">
         <div class="row">
@@ -107,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
+    <div class="container-fluid bg-dark py-3 footer" style="margin-bottom: auto;">
         <div class="row mt-3">
             <div class="">
                 <p class="text-light">
