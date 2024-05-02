@@ -1,0 +1,9 @@
+<div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
+    <div class="row mt-3">
+        <div class="">
+            <p class="text-light">
+                Контакты:
+            </p>
+        </div>
+    </div>
+</div>
