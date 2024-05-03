@@ -3,6 +3,7 @@ package com.example.zoo.controlles;
 import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MainController {
@@ -11,4 +12,6 @@ public class MainController {
         model.addAttribute("name","Anzhelika");
         return "hello.html";
     }
+
+    
 }

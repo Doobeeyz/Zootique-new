@@ -1,5 +1,6 @@
 package com.example.zoo.services;
 
+import com.example.zoo.models.Product;
 import com.example.zoo.models.User;
 import com.example.zoo.models.enums.Role;
 import com.example.zoo.repositories.UserRepository;
@@ -25,5 +26,9 @@ public class UserService {
         log.info("Saving new User with email: {}", userEmail);
         userRepository.save(user);
         return true;
+    }
+
+    public User getUserById(Long id) {
+        return userRepository.findById(id).orElse(null);
     }
 }

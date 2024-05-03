@@ -6,10 +6,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <title>Zootique</title>
-    <link rel="stylesheet" href="../../../../../demo2/src/main/resources/static/css/style.css">
+    <link rel="stylesheet" href="../resources/static/css/style.css">
     <style>
         body {
-            overflow-x: hidden ;
+            overflow-x: hidden;
         }
 
         #hero {
@@ -91,7 +91,7 @@
     </style>
 </head>
 <body style="overflow-x: hidden;">
-<header id="header">
+    <header id="header"> 
     <div class="" style=" z-index: 2;">
         <div class="row">
             <div class="col-12 bg-dark">
@@ -107,21 +107,21 @@
                                     <a class="nav-link " aria-current="page" href="/">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="products">Весь каталог</a>
+                                    <a class="nav-link" aria-current="page" href="productsUser">Весь каталог</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="/bucket">Корзина</a>
+                                    <a class="nav-link" aria-current="page" href="bucket">Корзина</a>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">  
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="login.html">Войти</a>
+                                    <a class="nav-link" aria-current="page" href="login">Войти</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="registration.html">Регистрация</a>
+                                    <a class="nav-link" href="registration">Регистрация</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="profile.html">Профиль</a>
+                                    <a class="nav-link" aria-current="page" href="profile">Профиль</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page">Выйти</a>
@@ -134,15 +134,15 @@
         </div>
     </div>
 </header>
-<div>
-    <div id="hero">
-        <div id="hero_text">
-            <h1>Добро пожаловать</h1>
-            <p>Мы предоставляем наиболее удобный и доступный способ покупки товаров для ваших любимца. Наш магазин располагает широким ассортиментом качественных и проверенных специалистами кормов и угощений, а так же аксессуаров на любую погоду и все случаи жизни.</p>
-            <a href=".recc" class="btn btn-success mb-4">Перейти к товарам</a>
+    <div>
+        <div id="hero">
+            <div id="hero_text">
+                <h1>Добро пожаловать</h1>
+                <p>Мы предоставляем наиболее удобный и доступный способ покупки товаров для ваших любимцев. Наш магазин располагает широким ассортиментом качественных и проверенных специалистами кормов и угощений, а так же аксессуаров на любую погоду и все случаи жизни.</p>
+                <a href="products" class="btn btn-success mb-4">Перейти к товарам</a>
+            </div>
         </div>
-    </div>
-    <div style="box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);">
+        <div style="box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);">
         <div class="container-lg">
             <div class="recc">
                 <h2 class="text-center mb-4">Мы рекомендуем</h2>
@@ -155,30 +155,30 @@
                         flex-wrap: wrap;
                         list-style: none;
                         justify-content: space-between;
-                    }
+                        }
 
                     .card {
                         width: 18rem;
                         margin-right: 10px;
                     }
                 </style>
-                <ul>
-                    <#list products as product><li>
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">${product.title}</h5>
-                                <p class="card-text">${product.price} ₸</p>
-                                <a href="/product/${product.id}" class="btn btn-success">Перейти к товару</a>
-                            </div>
-                        </div></li>
-                    <#else>
-                        <h3>Товаров нет</h3>
-                    </#list>
-                </ul>
+            <ul>
+            <#list products as product><li>
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">${product.title}</h5>
+                        <p class="card-text">${product.price} ₸</p>
+                        <a href="/product/${product.id}" class="btn btn-success">Перейти к товару</a>
+                    </div>
+                </div></li>
+            <#else>
+                <h3>Товаров нет</h3>
+            </#list>
+            </ul>
             </div>
         </div>
-    </div>
+        </div>
 
     <div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
         <div class="row mt-3">
@@ -189,4 +189,4 @@
             </div>
         </div>
     </div>
-</div>
+    </div>

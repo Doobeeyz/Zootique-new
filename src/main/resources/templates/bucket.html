@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="../../../../../demo2/src/main/resources/static/css/style.css">
 </head>
 <body style="overflow-x: hidden;">
-<header id="header">
+    <header id="header"> 
     <div class="" style=" z-index: 2;">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 bg-dark">
                 <nav class="navbar navbar-expand-lg navbar-dark ">
                     <div class="container-fluid">
                         <a class="navbar-brand" style="font-size: 1.5rem;" href="vet.ftlh">Zootique</a>
@@ -22,24 +22,24 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link " aria-current="page" href="vet.ftlh">Главная</a>
+                                    <a class="nav-link " aria-current="page" href="/">Главная</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="catalog.html">Весь каталог</a>
+                                    <a class="nav-link" aria-current="page" href="products">Весь каталог</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="bucket.html">Корзина</a>
+                                    <a class="nav-link" aria-current="page" href="bucket">Корзина</a>
                                 </li>
                             </ul>
-                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">  
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="login.html">Войти</a>
+                                    <a class="nav-link" aria-current="page" href="login">Войти</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="registration.html">Регистрация</a>
+                                    <a class="nav-link" href="registration">Регистрация</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="profile.html">Профиль</a>
+                                    <a class="nav-link" aria-current="page" href="profile">Профиль</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" aria-current="page">Выйти</a>
@@ -52,72 +52,72 @@
         </div>
     </div>
 </header>
-<div class="container-xl">
-    <div class="row">
-        <div class="col-12">
-            <div class="container-lg">
-                <div id="recc">
-                    <h2 class="text-center mb-4">Рекомендуемые товары</h2>
-                    <div id="products-list" class="card-list"></div>
+    <div class="container-xl">
+        <div class="row">
+            <div class="col-12">
+                <div class="container-lg">
+                    <div id="recc">
+                        <h2 class="text-center mb-4"></h2>
+                        <div id="products-list" class="card-list"></div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
-    <div class="row mt-3">
-        <div class="">
-            <p class="text-light">Контакты:</p>
+    <div class="container-fluid bg-dark py-3" style="margin-bottom: auto;">
+        <div class="row mt-3">
+            <div class="">
+                <p class="text-light">Контакты:</p>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    let productsList = document.getElementById('products-list');
+    <script>
+        let productsList = document.getElementById('products-list');
 
-    for (let i = 0; i < 3; i++) {
-        let cardDiv = document.createElement('div');
-        cardDiv.setAttribute('class', 'card mb-3');
-        cardDiv.setAttribute('style', 'min-width: 930px;');
+        for (let i = 0; i < 3; i++) {
+            let cardDiv = document.createElement('div');
+            cardDiv.setAttribute('class', 'card mb-3');
+            cardDiv.setAttribute('style', 'min-width: 930px;');
 
-        let rowDiv = document.createElement('div');
-        rowDiv.setAttribute('class', 'row');
+            let rowDiv = document.createElement('div');
+            rowDiv.setAttribute('class', 'row');
 
-        let imgColDiv = document.createElement('div');
-        imgColDiv.setAttribute('class', 'col-md-2');
+            let imgColDiv = document.createElement('div');
+            imgColDiv.setAttribute('class', 'col-md-2');
 
-        let img = document.createElement('img');
-        img.setAttribute('src', '...');
-        img.setAttribute('class', 'img-fluid rounded-start');
-        img.setAttribute('style', 'max-width: 150px; max-height: 180px;');
+            let img = document.createElement('img');
+            img.setAttribute('src', '...');
+            img.setAttribute('class', 'img-fluid rounded-start');
+            img.setAttribute('style', 'max-width: 150px; max-height: 180px;');
 
-        let contentColDiv = document.createElement('div');
-        contentColDiv.setAttribute('class', 'col-md-8');
+            let contentColDiv = document.createElement('div');
+            contentColDiv.setAttribute('class', 'col-md-8');
 
-        let cardBodyDiv = document.createElement('div');
-        cardBodyDiv.setAttribute('class', 'card-body');
+            let cardBodyDiv = document.createElement('div');
+            cardBodyDiv.setAttribute('class', 'card-body');
 
-        let title = document.createElement('h5');
-        title.setAttribute('class', 'card-title');
-        title.textContent = 'Название товара';
+            let title = document.createElement('h5');
+            title.setAttribute('class', 'card-title');
+            title.textContent = 'Название товара';
 
-        let description = document.createElement('p');
-        description.setAttribute('class', 'card-text');
-        description.textContent = 'Описание товара';
+            let description = document.createElement('p');
+            description.setAttribute('class', 'card-text');
+            description.textContent = 'Описание товара';
 
-        let price = document.createElement('b');
-        price.textContent = 'Цена';
+            let price = document.createElement('b');
+            price.textContent = 'Цена';
 
-        cardBodyDiv.appendChild(title);
-        cardBodyDiv.appendChild(description);
-        cardBodyDiv.appendChild(price);
-        contentColDiv.appendChild(cardBodyDiv);
-        imgColDiv.appendChild(img);
-        rowDiv.appendChild(imgColDiv);
-        rowDiv.appendChild(contentColDiv);
-        cardDiv.appendChild(rowDiv);
-        productsList.appendChild(cardDiv);
-    }
-</script>
+            cardBodyDiv.appendChild(title);
+            cardBodyDiv.appendChild(description);
+            cardBodyDiv.appendChild(price);
+            contentColDiv.appendChild(cardBodyDiv);
+            imgColDiv.appendChild(img);
+            rowDiv.appendChild(imgColDiv);
+            rowDiv.appendChild(contentColDiv);
+            cardDiv.appendChild(rowDiv);
+            productsList.appendChild(cardDiv);
+        }
+    </script>
 </body>
 </html>

@@ -22,7 +22,7 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/public/**", "/product/create", "/product/delete/**").permitAll()  // Добавлен доступ к созданию и удалению продуктов
+                        .requestMatchers("/public/**").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(withDefaults())
                 .httpBasic(withDefaults());
